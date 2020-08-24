@@ -13,7 +13,7 @@ use PhpBundle\Jwt\Domain\Entities\JwtHeaderEntity;
 use PhpBundle\Jwt\Domain\Entities\JwtProfileEntity;
 use PhpBundle\Jwt\Domain\Entities\KeyEntity;
 use PhpBundle\Crypt\Domain\Enums\EncryptFunctionEnum;
-use PhpBundle\Crypt\Domain\Enums\EncryptKeyTypeEnum;
+use PhpBundle\Jwt\Domain\Enums\EncryptKeyTypeEnum;
 use PhpBundle\Jwt\Domain\Enums\JwtAlgorithmEnum;
 use PhpBundle\Jwt\Domain\Exceptions\SignatureInvalidException;
 use PhpBundle\Jwt\Domain\Strategies\Func\FuncContext;
@@ -33,7 +33,6 @@ class JwtEncodeHelper
         JwtModelHelper::verifyTime($tokenDto);
         self::verifySignature($tokenDto, $profileEntity->key);
     }
-
 
     public static function encode(array $payload, KeyEntity $keyEntity, JwtHeaderEntity $jwtHeaderEntity = null): string
     {

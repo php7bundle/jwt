@@ -3,9 +3,9 @@
 namespace PhpBundle\Jwt\Domain\Strategies\Func;
 
 use PhpBundle\Crypt\Domain\Enums\EncryptFunctionEnum;
-use PhpBundle\Crypt\Domain\Strategies\Func\Handlers\HandlerInterface;
-use PhpBundle\Crypt\Domain\Strategies\Func\Handlers\HmacStrategy;
-use PhpBundle\Crypt\Domain\Strategies\Func\Handlers\OpenSslStrategy;
+use PhpBundle\Jwt\Domain\Strategies\Func\Handlers\HandlerInterface;
+use PhpBundle\Jwt\Domain\Strategies\Func\Handlers\HmacStrategy;
+use PhpBundle\Jwt\Domain\Strategies\Func\Handlers\OpenSslStrategy;
 use PhpLab\Core\Patterns\Strategy\Base\BaseStrategyContextHandlers;
 
 /**

@@ -35,5 +35,4 @@ class JwtAlgorithmEnum extends BaseEnum
     {
         return array_key_exists($algorithm, self::$supportedAlgorithms);
     }
-
 }
